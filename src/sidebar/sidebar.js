@@ -8,9 +8,22 @@ import SidebarItemComponent from '../sidebaritem/sidebaritem';
 class SidebarComponent extends React.Component {
   constructor(){
     super();
+    this.state = {
+      addingNote: false,
+      title: null
+    };
   }
   render(){
-    return(<div> This is the sidebar </div>
+
+    const { notes, classes, selectedNoteIndex } = this.props;
+
+    return(
+    <div className={classes.sidebarContainer}>
+      <Button
+        onClick={this.newNoteBtnClick}
+        className={classes.newNoteBtn}>
+      </Button>
+    </div>
     );
   }
 }
