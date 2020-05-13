@@ -22,9 +22,12 @@ class SidebarComponent extends React.Component {
       <Button
         onClick={this.newNoteBtnClick}
         className={classes.newNoteBtn}>
-      </Button>
+      New Note</Button>
     </div>
     );
+  }
+  newNoteBtnClick = () => {
+    console.log("button clicked");
   }
 }
 
