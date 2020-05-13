@@ -35,6 +35,11 @@ class SidebarComponent extends React.Component {
             placeholder=" Enter Note Title"
             onKeyUp={(e) => this.updateTitle(e.target.value)}>
           </input>
+          <Button
+            className={classes.newNoteSubmitBtn}
+            onClick={this.newNote}>
+            Submit Note
+          </Button>
 
         </div> :
         null
@@ -49,6 +54,10 @@ class SidebarComponent extends React.Component {
 
   updateTitle = (txt) => {
     console.log('new title: ', txt);
+  }
+
+  newNote = () =>{
+    console.log(this.state);
   }
 }
 
