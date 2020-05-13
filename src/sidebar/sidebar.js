@@ -5,6 +5,8 @@ import List from '@material-ui/core/List';
 import { Divider, Button } from '@material-ui/core';
 import SidebarItemComponent from '../sidebaritem/sidebaritem';
 
+//onKeyUp - when the user lifts their finger from the key. e is the event. updateTitle will be a function updating the title of the note entry. e.target.value (what the user is typing in as the title) is getting passed into our updateTitle function.
+
 class SidebarComponent extends React.Component {
   constructor(){
     super();
@@ -23,6 +25,18 @@ class SidebarComponent extends React.Component {
         onClick={this.newNoteBtnClick}
         className={classes.newNoteBtn}>
       New Note</Button>
+      {
+        this.state.addingNote ?
+        <div>
+          <input type="text"
+            className={classes.newNoteInput}
+            placeholder=" Enter Note Title"
+            onKeyUp={(e) => this.updateTitle(e.target.value)}>
+          </input>
+
+        </div> :
+        null
+      }
     </div>
     );
   }
