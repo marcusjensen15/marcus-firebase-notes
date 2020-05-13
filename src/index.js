@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import firebaseConfig from './firebasecreds.js';
+
+const firebase = require('firebase');
+require('firebase/firestore');
+
+const logCreds = () => {
+  console.log(firebaseConfig);
+}
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {logCreds()}
   </React.StrictMode>,
   document.getElementById('root')
 );
