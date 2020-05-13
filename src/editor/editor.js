@@ -7,7 +7,7 @@ import styles from './styles';
 
 //The export default withStyles(styles)(EditorComponent) is styling our EditorComponent. Its going to be a shortcut for styling
 
-//Debouncing is writing a seperate function to handle updating a database when a user stops typing. The purpose of this is so the app isn't making a ton of HTTP requests. 
+//Debouncing is writing a seperate function to handle updating a database when a user stops typing. The purpose of this is so the app isn't making a ton of HTTP requests. We are passing our update function into our debounce function.
 
 
 
@@ -41,8 +41,9 @@ class EditorComponent extends React.Component {
   };
 
   update = debounce(() => {
-
-  });
+    //return later
+    console.log('updating db');
+  }, 1500);
 }
 
 export default withStyles(styles)(EditorComponent);
