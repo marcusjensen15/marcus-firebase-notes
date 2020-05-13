@@ -8,14 +8,9 @@ import firebaseConfig from './firebasecreds.js';
 const firebase = require('firebase');
 require('firebase/firestore');
 
-const logCreds = () => {
-  console.log(firebaseConfig);
-}
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {logCreds()}
   </React.StrictMode>,
   document.getElementById('root')
 );
