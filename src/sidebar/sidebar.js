@@ -7,6 +7,8 @@ import SidebarItemComponent from '../sidebaritem/sidebaritem';
 
 //onKeyUp - when the user lifts their finger from the key. e is the event. updateTitle will be a function updating the title of the note entry. e.target.value (what the user is typing in as the title) is getting passed into our updateTitle function.
 
+//flipping state adding note if the new note button is clicked. this will desplay our title input field. title also set to null because it will be blank when the user begins typing.
+
 class SidebarComponent extends React.Component {
   constructor(){
     super();
@@ -42,6 +44,11 @@ class SidebarComponent extends React.Component {
   }
   newNoteBtnClick = () => {
     console.log("button clicked");
+    this.setState({title: null, addingNote: !this.state.addingNote})
+  }
+
+  updateTitle = (txt) => {
+    console.log('new title: ', txt);
   }
 }
 
