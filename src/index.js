@@ -8,9 +8,13 @@ import firebaseConfig from './firebasecreds.js';
 const firebase = require('firebase');
 require('firebase/firestore');
 
+
+firebase.initializeApp(firebaseConfig);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
