@@ -13,11 +13,20 @@ class EditorComponent extends React.Component {
 
   constructor() {
     super();
+    this.state = {
+      text: '',
+      title: '',
+      id: ''
+    };
   }
 
   render(){
+    const { classes } = this.props;
+
     return(
-      <div> This is the Editor Page </div>
+      <div className={classes.editorContainer}>
+        <ReactQuill></ReactQuill>
+      </div>
     );
   }
 }
