@@ -85,7 +85,16 @@ newNote = async (title) => {
   }
   const newFromDB = await firebase
     .firestore()
-
+    .collection('notes')
+    .add({
+      title: note.title,
+      body: note.body,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    const newID = newFromDB.id;
+    await this.setState({notes: [...this.state.notes, note]});
+    const newNoteIndex = this.state.notes.indexOf(this.state.notes.filter(_note => _note.id === newID)[0]);
+    this.setState({ selectedNote: this.state.notes[newNoteIndex], selectedNoteIndex: newNoteIndex});
 }
 
 }
