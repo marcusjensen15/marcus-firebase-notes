@@ -36,7 +36,11 @@ class App extends React.Component {
           selectNote={this.selectNote}
           newNote={this.newNote}>
         </SidebarComponent>
-        <EditorComponent></EditorComponent>
+        <EditorComponent
+          selectedNote={this.state.selectedNote}
+          selectedNoteIndex={this.state.selectedNoteIndex}
+          notes={this.state.notes}>
+        </EditorComponent>
 
       </div>);
   }
@@ -53,7 +57,7 @@ class App extends React.Component {
     });
   }
 
-selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note})
+selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note});
 
 }
 
