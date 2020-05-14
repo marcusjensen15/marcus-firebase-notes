@@ -12,6 +12,8 @@ const firebase = require('firebase');
 // data() is a function that grabs the data from the doc.
 //data['id'] -> adding the id property to our data object.
 
+//Our selectNote/deleteNote will live at the app.js level. It is handy to keep all of the functions that interact with firebase in the same place.
+
 class App extends React.Component {
 
   constructor(){
@@ -29,7 +31,10 @@ class App extends React.Component {
       <div className="app-container">
         <SidebarComponent
           selectedNoteIndex={this.state.selectedNoteIndex}
-          notes={this.state.notes}>
+          notes={this.state.notes}
+          deleteNote={this.deleteNote}
+          selectNote={this.selectNote}
+          newNote={this.newNote}>
         </SidebarComponent>
         <EditorComponent></EditorComponent>
 
