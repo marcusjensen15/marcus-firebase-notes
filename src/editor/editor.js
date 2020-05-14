@@ -11,6 +11,8 @@ import styles from './styles';
 
 //updateBody is calling update which is calling debounce. 1500 is being passed into debounce as a parameter 'b' in helpers.js. Basically, everytime you type something it restarts that 1.5 second timer. We could adjust the 1.5 to any length of timeout before making another http request.
 
+//we will use componentDidUpdate to re-render the component and update the text, title and id. The problem with only having componentDidMount is it will work for the initial click, but won't re-render if you click on another note.
+
 
 
 
