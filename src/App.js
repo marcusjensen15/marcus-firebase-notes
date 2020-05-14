@@ -14,6 +14,9 @@ const firebase = require('firebase');
 
 //Our selectNote/deleteNote will live at the app.js level. It is handy to keep all of the functions that interact with firebase in the same place.
 
+//noteUpdate function is interacting with firebase. update is an out of the box firebase method (i believe).
+//within noteUpdate, the: firebase.firestore.FieldValue.serverTimestamp() are all built in firebase methods.
+
 class App extends React.Component {
 
   constructor(){
@@ -41,7 +44,8 @@ class App extends React.Component {
         <EditorComponent
           selectedNote={this.state.selectedNote}
           selectedNoteIndex={this.state.selectedNoteIndex}
-          notes={this.state.notes}>
+          notes={this.state.notes}
+          noteUpdate={this.noteUpdate}>
         </EditorComponent>
         :
         null
@@ -62,6 +66,17 @@ class App extends React.Component {
   }
 
 selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note});
+noteUpdate = (id, noteObj) => {
+  firebase
+  .firestore()
+  .collection('notes')
+  .doc(id)
+  .update({
+    title: noteObj.title,
+    body: noteObj.body,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  })
+}
 
 }
 
