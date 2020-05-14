@@ -22,6 +22,12 @@ class SidebarItemComponent extends React.Component {
           <div
             className={classes.textSection}
             onClick={ () => this.selectNote(_note, _index)}>
+            <ListItemText
+              primary={_note.title}
+              secondary={removeHTMLTags(_note.body.substring(0, 30)) + '...'}>
+
+
+            </ListItemText>
           </div>
 
 
