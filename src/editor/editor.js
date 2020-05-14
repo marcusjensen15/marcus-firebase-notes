@@ -13,6 +13,8 @@ import styles from './styles';
 
 //we will use componentDidUpdate to re-render the component and update the text, title and id. The problem with only having componentDidMount is it will work for the initial click, but won't re-render if you click on another note.
 
+//componentDidUpdate gets called whenever the component properties are updated.
+
 
 
 
@@ -33,6 +35,16 @@ class EditorComponent extends React.Component {
       title: this.props.selectedNote.title,
       id: this.props.selectedNote.id
     });
+  }
+
+  componentDidUpdate = () => {
+    if(this.props.selectedNote.id !== this.state.id){
+      this.setState({
+        text: this.props.selectedNote.body,
+        title: this.props.selectedNote.title,
+        id: this.props.selectedNote.id
+      });
+    }
   }
 
   render(){
