@@ -9,12 +9,15 @@ import { removeHTMLTags } from '../helpers';
 
 class SidebarItemComponent extends React.Component {
 
-  constructor(){
-    super();
-  }
-
   render(){
-    return(<div> This is the side bar item </div>);
+
+    const { _index, _note, classes, selectedNoteIndex } = this.props;
+
+    return(
+      <div>
+
+      </div>
+    );
   }
 }
 
