@@ -78,6 +78,16 @@ noteUpdate = (id, noteObj) => {
   })
 }
 
+newNote = async (title) => {
+  const note = {
+    title: title,
+    body: ' '
+  }
+  const newFromDB = await firebase
+    .firestore()
+
+}
+
 }
 
 export default App;
