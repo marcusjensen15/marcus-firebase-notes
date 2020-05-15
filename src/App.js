@@ -101,7 +101,20 @@ deleteNote = async (note) =>{
   await this.setState({notes: this.state.notes.filter(_note => _note !== note)});
   if(this.state.selectedNoteIndex === noteIndex){
     this.setState({ selectedNoteIndex: null, selectedNote: null});
-  }else{
+  }
+
+  //experimental conditionall right here. tyring to get note to not deselect if you delete another one.if you click one below it will de-select.
+
+  else if(this.state.selectedNoteIndex !== noteIndex){
+    if(this.state.notes === 0){
+    this.setState({ selectedNoteIndex: null, selectedNote: null});
+    }
+  }
+
+  //above is end of experimental conditional if deleted it will return to the same as origional master
+  
+
+  else{
     this.state.notes.length > 1 ?
     this.selectNote(this.state.notes[this.state.selectedNoteIndex - 1], this.state.selectedNoteIndex - 1)
     :
