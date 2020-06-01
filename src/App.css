@@ -104,7 +104,8 @@ html, body {
 
 #editorTitleInput{
   font-size: 12px;
-  height: 40px;
+  height: 35px;
+  padding-left: 10px;
   font-weight: bold;
 }
 
