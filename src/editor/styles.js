@@ -16,7 +16,7 @@ const styles = theme => ({
     width: '100%',
     backgroundColor: '#29487d',
     color: 'white',
-    paddingLeft: '50px'
+    paddingLeft: '20px'
   },
   editIcon: {
     position: 'absolute',
