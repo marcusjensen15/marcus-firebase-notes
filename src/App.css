@@ -111,5 +111,35 @@ html, body {
 
 /* end editor component mobile styling */
 
+/* new note button  */
+
+#newNoteButton{
+  height: 35px;
+  font-size: 10px;
+}
+
+
+/* end new note button */
+
+/* submit note button  */
+
+#submitNoteButton{
+  height: 35px;
+  font-size: 10px;
+}
+
+
+/* end submit note button */
+
+
+/* note title field */
+
+#noteTitleField{
+  height: 35px;
+  font-size: 10px;
+}
+
+/* end note title field */
+
 
 }
