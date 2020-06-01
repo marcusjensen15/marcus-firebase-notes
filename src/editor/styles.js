@@ -24,11 +24,14 @@ const styles = theme => ({
     top: '12px',
     color: 'white',
     width: '10',
-    height: '10'
+    height: '10',
+    display: 'none'
   },
   editorContainer: {
     height: '100%',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    width: '80%',
+    float: 'left'
   }
 });
 
