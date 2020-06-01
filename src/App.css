@@ -15,9 +15,9 @@ html, body {
   box-sizing: border-box;
 }
 .quill {
-  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
-  width: calc(100% - 300px);
+  width: 100%;
   float: left;
 }
 .ql-container {
@@ -36,4 +36,110 @@ html, body {
   position: absolute;
   top: 50px;
   left: calc(50% - 165px);
+}
+
+
+/* Below is all mobile styling for all of the components. I didn't want to modify each individual style object within each component folder.  */
+
+@media screen and (max-width: 1200px) {
+
+  /* instructions component mobile styling */
+  .app-container .instructionsContainer {
+    width: 70%;
+    padding-top: 20%;
+    padding-left: 5%;
+  }
+  .app-container .instructionsContainer ul {
+    font-size: 12px;
+  }
+  .app-container .instructionsContainer h2 {
+    font-size: 16px;
+
+  }
+
+  .app-container .instructionsContainer .instructionsList li{
+    margin-bottom: 12px;
+  }
+
+  /* end instructions component mobile styling */
+
+  /* sidebar component mobile styling */
+
+  .app-container #sidebarContainer {
+    width: 30%;
+  }
+
+  /* sidebar item mobile styling */
+
+  /* this mess is all the classes necessary to target each list item's title */
+.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* this is targeting each list items sample pargagraph within the sidebar. */
+
+.MuiTypography-root.MuiListItemText-secondary.MuiTypography-body2.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
+  font-size: 12px;
+  display: none;
+}
+
+/* this is targeting the trash can delete icon */
+
+#trashIcon{
+  height: 18px;
+}
+
+/* end sidebar component mobile styling */
+
+/* editor component mobile styling */
+
+/* this is the entire editor component div */
+#editorContainer{
+  width: 70%;
+  float: left;
+}
+
+/* this is the note title */
+
+#editorTitleInput{
+  font-size: 12px;
+  height: 35px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/* end editor component mobile styling */
+
+/* new note button  */
+
+#newNoteButton{
+  height: 35px;
+  font-size: 10px;
+}
+
+
+/* end new note button */
+
+/* submit note button  */
+
+#submitNoteButton{
+  height: 35px;
+  font-size: 10px;
+}
+
+
+/* end submit note button */
+
+
+/* note title field */
+
+#noteTitleField{
+  height: 35px;
+  font-size: 10px;
+}
+
+/* end note title field */
+
+
 }

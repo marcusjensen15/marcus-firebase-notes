@@ -19,7 +19,7 @@ unreadMessage: {
 },
 newNoteBtn: {
   width: '100%',
-  height: '35px',
+  height: '50px',
   borderBottom: '1px solid black',
   borderRadius: '0px',
   backgroundColor: '#29487d',
@@ -30,7 +30,7 @@ newNoteBtn: {
 },
 sidebarContainer: {
   marginTop: '0px',
-  width: '300px',
+  width: '20%',
   height: '100%',
   boxSizing: 'border-box',
   float: 'left',
@@ -40,7 +40,7 @@ sidebarContainer: {
 newNoteInput: {
   width: '100%',
   margin: '0px',
-  height: '35px',
+  height: '50px',
   outline: 'none',
   border: 'none',
   paddingLeft: '5px',
@@ -51,6 +51,7 @@ newNoteInput: {
 newNoteSubmitBtn: {
   width: '100%',
   backgroundColor: '#28787c',
+  height: '50px',
   borderRadius: '0px',
   color: 'white'
 }

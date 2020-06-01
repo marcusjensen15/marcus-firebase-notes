@@ -13,10 +13,10 @@ const styles = theme => ({
     border: 'none',
     padding: '5px',
     fontSize: '24px',
-    width: 'calc(100% - 300px)',
+    width: '100%',
     backgroundColor: '#29487d',
     color: 'white',
-    paddingLeft: '50px'
+    paddingLeft: '20px'
   },
   editIcon: {
     position: 'absolute',
@@ -24,11 +24,14 @@ const styles = theme => ({
     top: '12px',
     color: 'white',
     width: '10',
-    height: '10'
+    height: '10',
+    display: 'none'
   },
   editorContainer: {
     height: '100%',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    width: '80%',
+    float: 'left'
   }
 });
 

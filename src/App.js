@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import SidebarComponent from './sidebar/sidebar';
 import EditorComponent from './editor/editor';
+import InstructionsComponent from './instructions/instructions';
+
 
 const firebase = require('firebase');
 
@@ -48,7 +50,7 @@ class App extends React.Component {
           noteUpdate={this.noteUpdate}>
         </EditorComponent>
         :
-        null
+        <InstructionsComponent></InstructionsComponent>
         }
       </div>);
   }
@@ -112,7 +114,7 @@ deleteNote = async (note) =>{
   }
 
   //above is end of experimental conditional if deleted it will return to the same as origional master
-  
+
 
   else{
     this.state.notes.length > 1 ?
